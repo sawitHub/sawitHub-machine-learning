@@ -41,17 +41,19 @@ We have utilized two different datasets and selected the best-performing model f
 </p>
 
 Dataset 1 has a very limited amount of data for training the CNN. To overcome this limitation, we have implemented an augmentation strategy. The data is split into two sets: a test set (40%) and a train-validation set (60%). Image augmentation is applied to the train-validation set using the `tensorflow.keras.preprocessing.image.ImageDataGenerator` module. Here are examples of the original images and the augmented images:
+
 <p align="center">
     <img src="assets/img/aug.png"> 
 </p>
+
 Dataset 2 consists of 3 classes, with each class containing a varying number of oil palm leaf images, ranging from 376 to 962. Here are example images from each class:
 <p align="center">
     <img src="assets/img/data2.png"> 
 </p>
-Dataset 2 has a sufficient amount of data to train the CNN compared to Dataset 1. However, there is an imbalance in the number of data samples per class. To address this issue, you have decided to perform oversampling. The data is split into two sets: a test set (20%) and a train-validation set (80%). Oversampling is applied to the train-validation set to balance the number of data samples per class. By applying oversampling, the data imbalance issue is mitigated, and each class in the train-validation set has a balanced number of data samples.
+Dataset 2 has a sufficient amount of data to train the CNN compared to Dataset 1. However, there is an imbalance in the number of data samples per class. To address this issue, we have decided to perform oversampling. The data is split into two sets: a test set (20%) and a train-validation set (80%). Oversampling is applied to the train-validation set to balance the number of data samples per class. By applying oversampling, the data imbalance issue is mitigated, and each class in the train-validation set has a balanced number of data samples.
 
 ## Modeling📉📈
-To build a robust CNN architecture, you have decided to implement transfer learning using a pre-trained MobileNet model. Custom layers are added below the base model. Here are the custom layers for each model (Model 1 and Model 2):
+To build a robust CNN architecture, we have decided to implement transfer learning using a pre-trained MobileNet model. Custom layers are added below the base model. Here are the custom layers for each model (Model 1 and Model 2):
 <p align="center">
     <img src="assets/img/layers.png"> 
 </p>
